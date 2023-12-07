@@ -1,0 +1,23 @@
+<html>
+<body>
+    <!-- Implement Your Code Here -->
+    <h2>WeHost</h2>
+    <div *ngIf = "!signup">
+        New to WeHost?<a href="#" id="signup" name="signup" (click)="toggleForm()">Sign Up</a>
+        <form>
+            <input type="text" name="userName" #userName placeholder="userName"/><br><br>
+            <input type="password" name="password" #password placeholder="Password"/><br><br>
+            <button #login>Login</button>
+        </form>
+    </div>
+    <div *ngIf="signup">
+        <form>
+            <input type="email" #emailId name="emailId"  placeholder="EmailId" required/><br><br>
+            <input type="text" name="contact" #contact placeholder="Contact Number"/><br><br>
+            <input type="email" #name name="name"  placeholder="User Name" required/><br><br>
+            <input type="password" name="password" #password placeholder="Password"/><br><br>
+            <button #sign>SignUp</button>
+        </form>
+    </div>
+</body>
+</html>

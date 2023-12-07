@@ -1,0 +1,60 @@
+<body>
+  <!--Fill code for heading -->
+  <h2>GNN Grocery Shop</h2>
+    <div class="form-group">
+      <!-- Fill code for Customer Name-->
+      <label>Customer Name</label>
+      <input type="text" id="customerName" placeholder="Enter your name">
+    </div>
+    <br>
+    <div class="form-group">
+      <!-- Fill code for Phone Number-->
+      <label>Phone Number</label>
+      <input type="text" id="phoneNumber" placeholder="Enter your number">
+    </div>
+    <br>
+    <div>
+      <!-- Fill code for Product Type-->
+      <label>Product Type</label>
+      <input type="text" id="search" name="search" [(ngModel)]="search" placeholder="Search Here">
+    </div>
+    
+    <!--Fill code for ngSwitch-->
+    <div [ngSwitch]="search">
+      <div *ngSwitchCase="'fruits'">
+        <select id="fruits" name="fruits">
+          <option>Select Fruits</option>
+          <option>Apple</option>
+          <option>Banana</option>
+          <option>Grapes</option>
+          <option>Guava</option>
+        </select>
+      </div>
+      <div *ngSwitchCase="'vegetables'">
+        <select id="vegetables" name="vegetables">
+          <option>Select Vegetables</option>
+          <option>Carrot</option>
+          <option>Beetroot</option>
+          <option>Potato</option>
+          <option>Mushroom</option>
+        </select>
+      </div>
+      <div *ngSwitchCase="'meat'">
+        <select id="meat" name="meat">
+          <option>Select Meat</option>
+          <option>Chicken</option>
+          <option>Goat</option>
+          <option>Beef</option>
+          <option>Pork</option>
+        </select>
+      </div>
+    </div>
+</body>
+
+
+
+
+
+
+
+

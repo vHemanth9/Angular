@@ -1,0 +1,44 @@
+	<!-- Implement title here -->
+  
+  <!-- <table> -->
+	<!-- Implement table code here -->
+  <!-- </table> 	 -->
+  <!-- <br><br> -->
+  
+  <!-- <div>   -->
+  
+      <!-- Implement Input box and button code here -->
+  <!-- </div> -->
+
+  <div style="text-align: center">
+    <h2>Product List</h2>
+  </div>
+  
+  <div>
+    <form>
+      <label for="code">Code:</label>
+      <input type="text" id="code" [(ngModel)]="model.code" name="code" required>
+      
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="model.name" name="name" required>
+      
+      <label for="price">Price:</label>
+      <input type="number" id="price" [(ngModel)]="model.price" name="price" required>
+      
+      <button type="button" (click)="addProduct()">Add Product</button>
+    </form>
+  </div>
+  
+  <table>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Price</th>
+    </tr>
+    <tr *ngFor="let product of prodList; let i = index" (click)="deleteProduct(i)">
+      <td>{{ product.code }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+    </tr>
+  </table>
+  

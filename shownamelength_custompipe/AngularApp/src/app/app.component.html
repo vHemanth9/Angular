@@ -1,0 +1,20 @@
+<!-- Implement your Code here -->
+ <table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Register Number</th>
+            <th>Age</th>
+            <th>Name Length</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of student">
+            <td>{{s.name}}</td>
+            <td>{{s.registerNumber}}</td>
+            <td>{{s.age}}</td>
+            <td>{{s.name | nameLength}}</td>
+        </tr>
+    </tbody>
+ </table>
+<!-- <p>{{ getJson() }}</p> -->

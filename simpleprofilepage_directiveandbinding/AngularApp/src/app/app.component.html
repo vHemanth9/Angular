@@ -1,0 +1,35 @@
+<html>
+    <h1>{{title}}</h1>
+    <ng-container *ngIf = "editMode; else editorMode">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>{{profile.name}}</td>
+            </tr>
+            <tr>
+                <td>Mail Id</td>
+                <td>{{profile.mail}}</td>
+            </tr>
+            <tr>
+                <td>Contact Number</td>
+                <td>{{profile.contact}}</td>
+            </tr>
+        </table>
+
+        <button id="edit" type="submit"(click)="toggleEditMode()">Update Profile</button>
+    </ng-container>
+
+    <ng-template #editorMode>
+        <form (submit) ="saveProfile()">
+            <label>Name</label>
+            <input id="name" name="name" type="text" [(ngModel)]="profile.name">
+            <label>Mail Id</label>
+            <input id="mail" name="mail" type="text" [(ngModel)]="profile.mail">
+            <label>Contact Number</label>
+            <input id="contact" name="contact" type="text" [(ngModel)]="profile.contact">
+            <button id="save" type="submit">Save</button>
+        </form>
+
+    </ng-template>
+
+</html>
